@@ -1,0 +1,24 @@
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+}
+
+.search-container {
+    width: 300px;
+    text-align: center;
+}
+
+.form {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form > * {
+    margin: 20px;
+}
+.search-form > button {
+    width: 100px;
+}
