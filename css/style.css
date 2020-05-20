@@ -57,16 +57,16 @@ button {
 form {
     padding: 20px;
 }*/
-/*%same-size {
-    width: 100;
-    height: auto;
-}*/
 .giphyBox {
   display: flex;
   align-items: center;
-  background-color: lightpink;
+  background-color: #D3BCCC;
   margin: 5px;
   padding: 10px;
+}
+
+.giphyBox > img {
+  border-radius: 20%;
 }
 
 .js-container {

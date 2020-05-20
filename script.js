@@ -1,13 +1,12 @@
 var API_URL;
-var getInputValue = ""; 
+var getInputValue = "";
 var giphyAPI_url = "http://api.giphy.com/v1/gifs/search?q=";
 var giphyAPI_key = "&api_key=my24YYU5rkJZ8sXSdpisAvyoZCkxQQW0&limit=";
 var getSearchNum = "";
 API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
 
-
-
 const js_container = document.querySelector( '.js-container' );
+const js_display_search = document.querySelector('.js-display-title');
 
 function toJSON ( response ) {
     console.log( response );
@@ -21,17 +20,23 @@ function processResponse ( content ) {
 
         let giphyURL = gif.url;
         let giphyImageURL = gif.images.fixed_width.url;
+        let giphyAltText = gif.title;
 
         markup = markup + `
             <div class="giphyBox">
-                <img src = "${giphyImageURL}" />
+                <a href="${giphyURL}" target="_blank"> <img src = "${giphyImageURL}" alt="${giphyAltText}" /></a>
             </div>
         `;
     }
     js_container.innerHTML = markup;
 }
 
-//                <div class="url"> URL: ${giphyURL} </div> 
+function displaySearch() {
+    let searchItem = getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1);
+    js_display_search.innerHTML = `
+        <h2> Here are your ${getSearchNum} ${searchItem} giphs. Enjoy!</h2>
+    `;
+}
 
 function errorHandling() {
     js_container.innerHTML = `
@@ -43,20 +48,15 @@ document.querySelector('.js-form').addEventListener('submit', returnGiphs);
 
 function returnGiphs(event) {
     event.preventDefault();
-    console.log(getInputValue);
-    getInputValue = document.querySelector('#search').value; 
+    getInputValue = document.querySelector('#search').value;
     getSearchNum = document.querySelector('#searchNum').value;
     API_URL = giphyAPI_url + getInputValue+ giphyAPI_key + getSearchNum;
-    console.log( API_URL)
+    console.log( API_URL);
+    displaySearch();
     fetch( API_URL )
         .then( toJSON )
         .then( processResponse )
         .catch( errorHandling );
-
+    document.querySelector("#search").value="";
+    document.querySelector("#searchNum").value="";
 }
-
-/*fetch( API_URL )
-    .then( toJSON )
-    .then( processResponse )
-    .catch( errorHandling );*/
-

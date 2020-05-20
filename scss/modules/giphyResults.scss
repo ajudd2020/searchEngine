@@ -1,15 +1,15 @@
-/*%same-size {
-    width: 100;
-    height: auto;
-}*/
+@import "../themes/theme";
 
 .giphyBox {
-    //@extend %same-size;
     display: flex;
     align-items: center;
-    background-color: lightpink;
+    background-color: $giph_bck_color;
     margin: 5px;
     padding: 10px;
+}
+
+.giphyBox > img {
+    border-radius: 20%;
 }
 
 .js-container {
