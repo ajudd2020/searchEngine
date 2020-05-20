@@ -1,7 +1,7 @@
 //establish needed variables and constants
 var API_URL;
 var getInputValue = "";
-var giphyAPI_url = "http://api.giphy.com/v1/gifs/search?q=";
+var giphyAPI_url = "https://api.giphy.com/v1/gifs/search?q=";
 var giphyAPI_key = "&api_key=my24YYU5rkJZ8sXSdpisAvyoZCkxQQW0&limit=";
 var getSearchNum = "";
 API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
