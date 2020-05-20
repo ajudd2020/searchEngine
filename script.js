@@ -1,3 +1,4 @@
+//establish needed variables and constants
 var API_URL;
 var getInputValue = "";
 var giphyAPI_url = "http://api.giphy.com/v1/gifs/search?q=";
@@ -8,11 +9,13 @@ API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
 const js_container = document.querySelector( '.js-container' );
 const js_display_search = document.querySelector('.js-display-title');
 
+//Convert To JSON
 function toJSON ( response ) {
     console.log( response );
     return response.json();
 };
 
+//Process JSON response 
 function processResponse ( content ) {
     console.log( content );
     let markup = '';
@@ -31,6 +34,7 @@ function processResponse ( content ) {
     js_container.innerHTML = markup;
 }
 
+//Display Search Criteria at top of page so when the search clears out the user will still see their parameters 
 function displaySearch() {
     let searchItem = getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1);
     js_display_search.innerHTML = `
@@ -38,6 +42,7 @@ function displaySearch() {
     `;
 }
 
+//Error handling 
 function errorHandling() {
     js_container.innerHTML = `
         <li class="error">Error loading data, make sure your network is on.</li>
@@ -46,6 +51,7 @@ function errorHandling() {
 
 document.querySelector('.js-form').addEventListener('submit', returnGiphs);
 
+//run returnGiphs function, prevent default, and clear out search fields without reloading page on submit
 function returnGiphs(event) {
     event.preventDefault();
     getInputValue = document.querySelector('#search').value;
