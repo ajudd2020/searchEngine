@@ -60,6 +60,3 @@ function returnGiphs(event) {
     .then( processResponse )
     .catch( errorHandling );*/
 
-
-
- 

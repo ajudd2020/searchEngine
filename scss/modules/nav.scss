@@ -1,0 +1,48 @@
+@import "../themes/theme";
+
+.text_color {
+    color: $text_color;
+}
+
+.navbar-custom {
+    color:$text_color;
+}
+
+.bg-color {
+    background-color: $secondary_bck_color;
+    .navbar-brand {
+        color: $secondary_text_color;
+        margin: 6px;
+    }
+    .footer_link {
+        margin: 2px;
+    }
+}
+
+.footer {
+    margin-top: 40px;
+}
+
+nav {
+    .navbar-brand {
+        &:hover {
+            background-color: $bck_color;
+            border: 2px white solid;
+            color: $text_color;
+            padding: 4px;
+            margin: 0px;
+        }
+    }
+    div > .footer_link {
+        &:hover {
+            background-color: $bck_color;
+            color: $text_color;
+            padding: 2px;
+            margin: 0px;
+        }
+    }
+}
+
+.bigger {
+height: 75px;
+}

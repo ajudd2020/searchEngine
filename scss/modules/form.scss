@@ -1,3 +1,28 @@
+@import "../themes/theme";
+.form {
+    .search-container {
+        display: flex;
+        justify-content: center;
+    }
+    .input {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 300px;
+    }
+    button {
+        margin-top: 15px;
+            &:hover {
+                background-color:$secondary_bck_color;
+                color: $text_color;
+            }
+    }
+    form {
+        padding: 20px;
+    }
+}
+
+/*
 .input {
     display: flex;
     flex-direction: column;
@@ -15,4 +40,4 @@ button {
 
 form {
     padding: 20px;
-}
+}*/
