@@ -1,5 +1,7 @@
 @import "../themes/theme";
 
+
+//mobile first design: 
 .giphyBox {
     display: flex;
     align-items: center;
@@ -17,9 +19,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
-
 
 //have different colors for different children- way to incorporate variables and mixins?
 

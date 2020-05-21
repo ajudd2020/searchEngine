@@ -1,4 +1,50 @@
 @import "../themes/theme";
+@import "../base/media-queries";
+
+//mobile first design:
+
+
+.form {
+    .search-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .input {
+        padding: 10px;
+        width: 350px;
+    }
+    input {
+        @include small-up {
+            width: 300px;
+        }
+    }
+    
+    button {
+        margin-top: 15px;
+    }
+    form {
+        padding: 20px;
+    }
+    button {
+        margin: 10px;
+        &:hover {
+            background-color:$secondary_bck_color;
+            color: $text_color;
+        }
+    }
+};
+
+//media queries
+
+//breakpoint 390px;
+
+
+
+
+// For @include medium-up
+/*
 .form {
     .search-container {
         display: flex;
@@ -12,15 +58,12 @@
     }
     button {
         margin-top: 15px;
-            &:hover {
-                background-color:$secondary_bck_color;
-                color: $text_color;
-            }
     }
     form {
         padding: 20px;
     }
 }
+*/
 
 /*
 .input {
