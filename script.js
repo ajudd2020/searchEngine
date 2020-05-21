@@ -2,9 +2,10 @@
 var API_URL;
 var getInputValue = "";
 var giphyAPI_url = "https://api.giphy.com/v1/gifs/search?q=";
-var giphyAPI_key = "&api_key=my24YYU5rkJZ8sXSdpisAvyoZCkxQQW0&limit=";
+var giphyAPI_key = "&api_key=iIEYEKDe7MZtSMvnRckndkB3k3KKs5dP&limit=";
 var getSearchNum = "";
 API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
+
 
 const js_container = document.querySelector( '.js-container' );
 const js_display_search = document.querySelector('.js-display-title');
@@ -38,7 +39,7 @@ function processResponse ( content ) {
 function displaySearch() {
     let searchItem = getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1);
     js_display_search.innerHTML = `
-        <h2> Here are your  <u>${getSearchNum} ${searchItem}</u> giphs. Enjoy!</h2>
+        <h2> Here are your <u>${getSearchNum} ${searchItem}</u> giphs. Enjoy!</h2>
     `;
 }
 
