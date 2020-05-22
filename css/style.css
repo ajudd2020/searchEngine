@@ -152,6 +152,9 @@ nav div > .footer_link:hover {
   padding: 2px;
   margin: 0px;
 }
+nav a {
+  color: #4A306D;
+}
 
 .bigger {
   height: 75px;
