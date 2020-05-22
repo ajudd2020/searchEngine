@@ -99,45 +99,6 @@ Extra large devices (large desktops, 1200px and up)
   color: #E8d7F1;
 }
 
-/*
-.form {
-    .search-container {
-        display: flex;
-        justify-content: center;
-    }
-    .input {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        width: 300px;
-    }
-    button {
-        margin-top: 15px;
-    }
-    form {
-        padding: 20px;
-    }
-}
-*/
-/*
-.input {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 300px;
-}
-.search-container {
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    margin-top: 15px;
-}
-
-form {
-    padding: 20px;
-}*/
 .giphyBox {
   display: flex;
   align-items: center;
