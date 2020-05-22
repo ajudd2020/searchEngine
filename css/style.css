@@ -34,35 +34,6 @@ Large devices (desktops, 992px and up)
 
 Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }*/
-/* 768px / 16px = 48em */
-/*
-@mixin medium-small-to-medium {
-    @media only screen and (mid-width: $mq-1 + (0.0625*23.625)) {
-
-    }
-}
-*/
-/*
-@mixin medium-up {
-    @media only screen and (min-width : $mq-1) {
-        @content;
-    }
-}
-
-@mixin medium-up {
-    @media only screen and (max-width : $mq-1 - 0.0625) {
-        @content;
-    }
-}
-
-@mixin small-and-above {
-    @media only screen and (min-width : $mq-1) {
-        @content;
-    }
-}
-
-
-*/
 .form .search-container {
   display: flex;
   justify-content: center;

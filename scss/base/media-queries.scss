@@ -1,4 +1,3 @@
-//look up breakpoints! 
 /* Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
 
@@ -12,52 +11,14 @@ Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }*/
 
 
-//
-// from bootcamp site $mq-1: 48em !default; /* 768px / 16px = 48em */
 
-$mq-1: 24.375 em !default; /* 768px / 16px = 48em */
-
-//390 to keep label over input and 660 before moving to input side-by-side
-//660 breakpoint equal to 24.375 em  
-
-//390 breakpoint 
 @mixin small-up {
     @media only screen and (min-width: 450px) {
         @content;
     }
 }
-// 660 breakpoint
 @mixin medium-small-up {
     @media only screen and (min-width: 660px) {
         @content;
     }
 }
-/*
-@mixin medium-small-to-medium {
-    @media only screen and (mid-width: $mq-1 + (0.0625*23.625)) {
-
-    }
-}
-*/
-
-/*
-@mixin medium-up {
-    @media only screen and (min-width : $mq-1) {
-        @content;
-    }
-}
-
-@mixin medium-up {
-    @media only screen and (max-width : $mq-1 - 0.0625) {
-        @content;
-    }
-}
-
-@mixin small-and-above {
-    @media only screen and (min-width : $mq-1) {
-        @content;
-    }
-}
-
-
-*/
