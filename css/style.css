@@ -16,15 +16,11 @@ body {
   text-align: center;
   background-color: #0E273C;
   color: #E8d7F1;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 body > h1 {
   margin-top: 80px;
-  font-family: "Balsamiq Sans", cursive;
-}
-
-.header_footer {
-  font-family: "Balsamiq Sans", cursive;
 }
 
 /* Small devices (landscape phones, 576px and up)
@@ -89,8 +85,11 @@ Extra large devices (large desktops, 1200px and up)
   font-family: "Bad Script", cursive;
   font-size: 24px;
 }
-.form button {
+.form .button {
   margin: 20px;
+  height: 25px;
+}
+.form button {
   padding: 5px;
   font-family: "Balsamiq Sans", cursive;
 }
