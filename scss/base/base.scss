@@ -15,6 +15,10 @@ body {
 }
 
 body > h1 {
-    margin-top: 75px;
+    margin-top: 80px;
+    font-family: $main_font;
 }
 
+.header_footer {
+    font-family: $main_font;
+}

@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Balsamiq+Sans&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -14,7 +19,12 @@ body {
 }
 
 body > h1 {
-  margin-top: 75px;
+  margin-top: 80px;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.header_footer {
+  font-family: "Balsamiq Sans", cursive;
 }
 
 /* Small devices (landscape phones, 576px and up)
@@ -72,14 +82,17 @@ Extra large devices (large desktops, 1200px and up)
     width: 300px;
   }
 }
-.form button {
-  margin-top: 15px;
-}
 .form form {
   padding: 20px;
 }
+.form label {
+  font-family: "Bad Script", cursive;
+  font-size: 24px;
+}
 .form button {
-  margin: 10px;
+  margin: 20px;
+  padding: 5px;
+  font-family: "Balsamiq Sans", cursive;
 }
 .form button:hover {
   background-color: #A167a5;

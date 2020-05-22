@@ -13,7 +13,7 @@ As an idividual that uses giphs in my conent/ text/ etc. I want to be able to qu
 
 ## As a developer, this page shows that I can:
 
-- create a page using an API
+- Create a page using an API
 - Use JavaScript to create and call functions
 - Use JavaScript to edit the HTML markup
 - Use bootstrap when needed/ beneficial
