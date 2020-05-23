@@ -9,7 +9,7 @@ As an idividual that uses the internet, I want to be able to find giphs so that 
 
 As an individual that uses giphs in my content, I want to be able to find giphs esily so that I can use them with the proper link/ attribution
 
-As an idividual that uses giphs in my conent/ text/ etc. I want to be able to quickly and efficiently seach for giphs that will also link me to the different options and other related content so that I can make an informed decision about which is best for my page.
+As a person that uses giphs, I want a search that will also give me a link where I can access different sizes/ formats so that I can pick which one is best for me.
 
 ## As a developer, this page shows that I can:
 
