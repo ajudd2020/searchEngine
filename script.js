@@ -4,7 +4,7 @@ var getInputValue = "";
 var giphyAPI_url = "https://api.giphy.com/v1/gifs/search?q=";
 var giphyAPI_key = "&api_key=iIEYEKDe7MZtSMvnRckndkB3k3KKs5dP&limit=";
 var getSearchNum = "";
-API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
+//API_URL = giphyAPI_url + encoded + giphyAPI_key + getSearchNum;
 
 
 const js_container = document.querySelector( '.js-container' );
@@ -45,19 +45,33 @@ function displaySearch() {
 
 //Error handling
 function errorHandling() {
+    js_display_search.innerHTML=`Sorry! Your Search Could Not Be Completed At This Time!`
     js_container.innerHTML = `
-        <li class="error">Error loading data, make sure your network is on.</li>
+        Error loading data, make sure your network is on.
     `;
 }
 
-document.querySelector('.js-form').addEventListener('submit', returnGiphs);
+document.querySelector('.js-form').addEventListener('submit', inputLength);
 
-//run returnGiphs function, prevent default, and clear out search fields without reloading page on submit
-function returnGiphs(event) {
+
+
+function inputLength(event) {
+    getInputValue = document.querySelector('#search').value.trim();
+    console.log(getInputValue);
+    getSearchNum = document.querySelector('#searchNum').value.trim();
+    if (getInputValue.length===0) {
+        alert("What would you like to search for?")
+    } else {
+        returnGiphs();
+    }
+}
+
+function returnGiphs() {
+    getInputValue = document.querySelector('#search').value.trim();
+    console.log(getInputValue);
+    getSearchNum = document.querySelector('#searchNum').value.trim();
     event.preventDefault();
-    getInputValue = document.querySelector('#search').value;
-    getSearchNum = document.querySelector('#searchNum').value;
-    API_URL = giphyAPI_url + getInputValue+ giphyAPI_key + getSearchNum;
+    API_URL = giphyAPI_url + encodeURI(getInputValue) + giphyAPI_key + getSearchNum;
     console.log( API_URL);
     displaySearch();
     fetch( API_URL )
@@ -67,3 +81,22 @@ function returnGiphs(event) {
     document.querySelector("#search").value="";
     document.querySelector("#searchNum").value="";
 }
+
+
+//run returnGiphs function, prevent default, and clear out search fields without reloading page on submit
+//MY ORIGINAL CODE THAT WORKS!!!! 
+/*function returnGiphs(event) {
+    event.preventDefault();
+    getInputValue = document.querySelector('#search').value.trim();
+    console.log(getInputValue);
+    getSearchNum = document.querySelector('#searchNum').value.trim();
+    API_URL = giphyAPI_url + encodeURI(getInputValue) + giphyAPI_key + getSearchNum;
+    console.log( API_URL);
+    displaySearch();
+    fetch( API_URL )
+        .then( toJSON )
+        .then( processResponse )
+        .catch( errorHandling );
+    document.querySelector("#search").value="";
+    document.querySelector("#searchNum").value="";
+}*/
