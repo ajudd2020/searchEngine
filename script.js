@@ -59,7 +59,7 @@ function inputLength() {
     getInputValue = document.querySelector('#search').value.trim();
     getSearchNum = document.querySelector('#searchNum').value.trim();
     if (getInputValue.length===0) {
-        alert("Don't forget to tell us what you want to search for!")
+        alert("Please enter a search.")
     } else {
         returnGiphs();
     }
