@@ -57,7 +57,7 @@ document.querySelector('.js-form').addEventListener('submit', inputLength);
 
 
 function inputLength() {
-    getInputValue = document.querySelector('#search').value.trim();
+    getInputValue = encodeURIComponent(document.querySelector('#search').value.trim());
     getSearchNum = document.querySelector('#searchNum').value.trim();
     if (getInputValue.length===0) {
         event.preventDefault();
@@ -71,8 +71,6 @@ function inputLength() {
 }
 
 function returnGiphs() {
-    getInputValue = encodeURIComponent(document.querySelector('#search').value.trim());
-    getSearchNum = document.querySelector('#searchNum').value.trim();
     event.preventDefault();
     API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
     displaySearch();
