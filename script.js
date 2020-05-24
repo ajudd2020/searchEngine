@@ -44,11 +44,11 @@ function displaySearch() {
 
 function errorHandling() {
     js_display_search.innerHTML= `
-        Sorry! Your Search Could Not Be Completed At This Time!
+        Sorry! Your search could not be completed at this time.
     `;
 
     js_container.innerHTML = `
-        Error loading data, make sure your network is on.
+        Please check your network connection and try again.
     `;
 }
 
