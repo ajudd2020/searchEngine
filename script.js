@@ -42,7 +42,10 @@ function displaySearch() {
 
 
 function errorHandling() {
-    js_display_search.innerHTML=`Sorry! Your Search Could Not Be Completed At This Time!`
+    js_display_search.innerHTML= `
+        Sorry! Your Search Could Not Be Completed At This Time!
+    `;
+
     js_container.innerHTML = `
         Error loading data, make sure your network is on.
     `;
