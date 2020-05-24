@@ -63,10 +63,11 @@ function inputLength() {
 }
 
 function returnGiphs() {
-    getInputValue = document.querySelector('#search').value.trim();
+    encodeURI(getInputValue = document.querySelector('#search').value.trim());
     getSearchNum = document.querySelector('#searchNum').value.trim();
     event.preventDefault();
-    API_URL = giphyAPI_url + encodeURI(getInputValue) + giphyAPI_key + getSearchNum;
+    API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
+    console.log(API_URL);
     displaySearch();
     fetch( API_URL )
         .then( toJSON )
