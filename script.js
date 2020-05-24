@@ -36,7 +36,6 @@ function processResponse ( content ) {
 function displaySearch() {
     if (getInputValue.includes("%20")) {
         var searchItemDecoded = getInputValue.split("%20").join(" ");
-        console.log(searchItemDecoded);
         js_display_search.innerHTML = `
         <h2> Here are your <u>${getSearchNum} ${searchItemDecoded}</u> giphs. Enjoy!</h2>
     `;
