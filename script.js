@@ -59,14 +59,14 @@ function inputLength() {
     getInputValue = document.querySelector('#search').value.trim();
     getSearchNum = document.querySelector('#searchNum').value.trim();
     if (getInputValue.length===0) {
-        alert("What would you like to search for?")
+        alert("Don't forget to tell us what you want to search for!")
     } else {
         returnGiphs();
     }
 }
 
 function returnGiphs() {
-    encodeURI(getInputValue = document.querySelector('#search').value.trim());
+    encodeURIComponent(getInputValue = document.querySelector('#search').value.trim());
     getSearchNum = document.querySelector('#searchNum').value.trim();
     event.preventDefault();
     API_URL = giphyAPI_url + getInputValue + giphyAPI_key + getSearchNum;
