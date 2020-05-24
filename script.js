@@ -34,32 +34,30 @@ function processResponse ( content ) {
 }
 
 function displaySearch() {
-    searchItem = encodeURIComponent(getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1));
-    if (searchItem.includes("%2520")) {
-        var searchItemDecoded = searchItem.split("%2520").join(" ");
+    if (getInputValue.includes("%20")) {
+        var searchItemDecoded = getInputValue.split("%20").join(" ");
         console.log(searchItemDecoded);
         js_display_search.innerHTML = `
         <h2> Here are your <u>${getSearchNum} ${searchItemDecoded}</u> giphs. Enjoy!</h2>
     `;
     } else {
         js_display_search.innerHTML = `
-        <h2> Here are your <u>${getSearchNum} ${searchItem}</u> giphs. Enjoy!</h2>
+        <h2> Here are your <u>${getSearchNum} ${getInputValue}</u> giphs. Enjoy!</h2>
     `;
     }
 }
 
 
 /*function displaySearch() {
-    searchItem = encodeURIComponent(getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1));
-    if (searchItem.includes("%2520")) {
-        var searchItemDecoded = searchItem.replaceAll("%2520", " ");
+    if (getInputValue.includes("%20")) {
+        var searchItemDecoded = getInputValue.replaceAll("%20", " ");
         console.log(searchItemDecoded);
         js_display_search.innerHTML = `
         <h2> Here are your <u>${getSearchNum} ${searchItemDecoded}</u> giphs. Enjoy!</h2>
     `;
     } else {
         js_display_search.innerHTML = `
-        <h2> Here are your <u>${getSearchNum} ${searchItem}</u> giphs. Enjoy!</h2>
+        <h2> Here are your <u>${getSearchNum} ${getInputValue}</u> giphs. Enjoy!</h2>
     `;
     }
 }*/
