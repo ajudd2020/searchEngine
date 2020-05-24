@@ -34,7 +34,7 @@ function processResponse ( content ) {
 
 
 function displaySearch() {
-    let searchItem = getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1);
+    let searchItem = encodeURIComponent(getInputValue.charAt(0).toUpperCase() + getInputValue.slice(1));
     js_display_search.innerHTML = `
         <h2> Here are your <u>${getSearchNum} ${searchItem}</u> giphs. Enjoy!</h2>
     `;
