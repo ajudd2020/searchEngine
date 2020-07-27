@@ -34,15 +34,28 @@ function processResponse ( content ) {
 }
 
 function displaySearch() {
-    if (getInputValue.includes("%20")) {
-        var searchItemDecoded = getInputValue.split("%20").join(" ");
-        js_display_search.innerHTML = `
-        <h2> Here are your <u>${getSearchNum} ${searchItemDecoded}</u> giphs. Enjoy!</h2>
-    `;
+    if (getSearchNum < 2) {
+        if (getInputValue.includes("%20")) {
+            var searchItemDecoded = getInputValue.split("%20").join(" ");
+            js_display_search.innerHTML = `
+            <h2> Here is your <u>${getSearchNum} ${searchItemDecoded}</u> giph. Enjoy!</h2>
+        `;
+        } else {
+            js_display_search.innerHTML = `
+            <h2> Here is your <u>${getSearchNum} ${getInputValue}</u> giph. Enjoy!</h2>
+        `;
+        }
     } else {
-        js_display_search.innerHTML = `
-        <h2> Here are your <u>${getSearchNum} ${getInputValue}</u> giphs. Enjoy!</h2>
-    `;
+        if (getInputValue.includes("%20")) {
+            var searchItemDecoded = getInputValue.split("%20").join(" ");
+            js_display_search.innerHTML = `
+            <h2> Here are your <u>${getSearchNum} ${searchItemDecoded}</u> giphs. Enjoy!</h2>
+        `;
+        } else {
+            js_display_search.innerHTML = `
+            <h2> Here are your <u>${getSearchNum} ${getInputValue}</u> giphs. Enjoy!</h2>
+        `;
+        }
     }
 }
 
